@@ -1,3 +1,10 @@
+::ng-deep .body{
+  background-color: #97e996;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+}
 #content {
   background-color: #59db57;
   border-radius: 10px;
