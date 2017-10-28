@@ -14,6 +14,11 @@ export class AppComponent implements OnInit {
     this.time = this.joke == "" ? 0 : 6000;
     this.service
       .getOneJoke(this.time)
-      .subscribe(res => (this.joke = res.json().value.joke));
+      .subscribe(res => (this.joke = decodeHTMLtoPlainText(res.json().value.joke)));
   }
+}
+function decodeHTMLtoPlainText(aValue) {
+  var elem = document.createElement('div');
+  elem.innerHTML = aValue;
+  return elem.childNodes[0].nodeValue;
 }
